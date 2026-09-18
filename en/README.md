@@ -1,60 +1,69 @@
-# Abrak documentation
+<div align="center">
 
-**[فارسی](../fa/README.md) · [English](../en/README.md) · [العربية](../ar/README.md) · [پښتو](../ps/README.md)**
+# Abrak — Odoo, localized for Iran
+
+**[فارسی](fa/README.md) · [English](en/README.md) · [العربية](ar/README.md) · [پښتو](ps/README.md)**
 
 Official documentation for [**Abrak**](https://abrak.org) (ابرک) — a cloud business
-platform built on [Odoo 19](https://www.odoo.com) and localized for Iran.
+platform built on [Odoo 19](https://www.odoo.com), localized for Iran and the wider
+Persian-, Arabic- and Pashto-speaking market.
+
+[![Website](https://img.shields.io/badge/website-abrak.org-1B3FAA)](https://abrak.org)
+[![YouTube](https://img.shields.io/badge/YouTube-@abrak--org-red)](https://www.youtube.com/@abrak-org)
+[![Blog](https://img.shields.io/badge/blog-abrak.org%2Fblog-444)](https://abrak.org/blog)
+[![GitHub](https://img.shields.io/badge/GitHub-abrakorg-181717)](https://github.com/abrakorg)
+
+</div>
+
+---
 
 ## What Abrak is
 
 Abrak runs the real Odoo 19 core — not a fork. The same open-source code, plus the
 things an Iranian business cannot use Odoo without: the Jalali (Solar Hijri) calendar,
 a right-to-left Persian interface, Rial pricing through Iranian payment gateways,
-in-country hosting, and connectors to the systems local businesses actually use.
+in-country hosting, and connectors to the systems local businesses already use.
 
-**82 integrated apps** covering accounting, CRM, inventory, manufacturing, HR, point of
+**82 integrated apps** across accounting, CRM, inventory, manufacturing, HR, point of
 sale, e-commerce and marketing. Every tenant gets its own database. You pay per user,
 not per app.
 
-## Contents
+> **Powered by:** All core capabilities derive from [Odoo 19](https://www.odoo.com) — the world's most popular open-source ERP. Abrak adds Iranian localization, in-country hosting, and Persian-language support. See the [Odoo source](https://github.com/odoo/odoo) and Abrak's [addons](https://github.com/abrakorg/abrak-odoo-addons).
 
-| Page | What it covers |
+## Why this repository exists
+
+Abrak's product code lives in private repositories. This repository is the **public,
+versioned documentation** — the reference an evaluator, integrator or customer can read
+without an account, in the language they work in.
+
+| Section | What it covers |
 |---|---|
-| [Getting started](getting-started.md) | The 7-day trial, your first workspace, adding users |
-| [Apps](apps.md) | The full catalogue of 82 apps, by category |
-| [Iran localization](iran-localization.md) | Jalali dates, Moadian e-invoicing, Sayad cheques, payroll and social insurance |
-| [Integrations](integrations.md) | WooCommerce, Torob, Instagram, SMS, cloud telephony, AI and MCP |
-| [Hosting & data](hosting-and-data.md) | Where data lives, backups, ownership and export |
-| [Pricing](pricing.md) | The per-user model and support tiers |
-| [FAQ](faq.md) | The questions that come up before buying |
+| Getting started | The 7-day trial, first workspace, first users |
+| Apps | The full catalogue, by category |
+| Iran localization | Jalali dates, the Moadian e-invoicing system, Sayad cheques, payroll and social-insurance filings |
+| Integrations | WooCommerce, Torob, Instagram, SMS, cloud telephony, AI/MCP |
+| Hosting & data | Where data lives, backups, ownership and export |
+| Pricing | The per-user model and support tiers |
+| FAQ | The questions that come up before buying |
 
-## Abrak versus a plain Odoo install
+## Language parity
 
-Odoo is open source and you can install it yourself. What a bare install does not give
-you:
+All four language editions cover the same pages. Persian is the source of truth; the
+English, Arabic and Pashto editions follow it. If an edition falls behind, that is a
+bug — please open an issue.
 
-- **The Jalali calendar throughout** — not just date display, but fiscal periods,
-  cheque maturity dates, quarterly statutory reports and payroll periods based on the
-  Solar Hijri year.
-- **Rial payment** — an Iranian bank gateway, not an international credit card.
-- **Iranian statutory compliance** — the Moadian e-invoicing system, Article 169
-  quarterly transaction reports, VAT returns, statutory ledgers, monthly social
-  insurance filings, and payroll that follows the annual Ministry of Labour rulings.
-- **Operations** — upgrades, daily backups and monitoring are Abrak's job, not yours.
+## Brand and attribution
 
-If you have an engineering team and want to self-host, Abrak's commercial modules are
-also sold separately — see <https://abrak.org/apps>.
+- **Brand:** Abrak (ابرک) — ERP for Iranian businesses
+- **Core platform:** Odoo 19 (LGPLv3) — [odoo.com](https://www.odoo.com) · [github.com/odoo/odoo](https://github.com/odoo/odoo)
+- **Localization & hosting:** Abrak Org — [abrak.org](https://abrak.org)
+- **Addons repository:** [github.com/abrakorg/abrak-odoo-addons](https://github.com/abrakorg/abrak-odoo-addons)
+- **This docs repo:** [github.com/abrakorg/abrak-docs](https://github.com/abrakorg/abrak-docs)
 
-## Who this is for
+---
 
-Businesses operating in Iran that need an ERP which is legally usable there: retailers,
-restaurants and food chains, manufacturers, distributors, and service companies. The
-restaurant and food-service cluster is where Abrak's own consulting practice is
-deepest — see <https://abrak.org/services/restaurant-erp>.
-
-## Contact
-
-- Website: <https://abrak.org>
-- Contact: <https://abrak.org/contactus> · `admin@abrak.org`
-- Blog and guides: <https://abrak.org/blog>
-- YouTube: <https://www.youtube.com/@abrak-org>
+<p align="center">
+<sub>Built on <a href="https://www.odoo.com">Odoo</a> (LGPLv3). Abrak adds Iranian localization, in-country hosting, and Persian-language support.
+<a href="https://github.com/abrakorg/abrak-odoo-addons">Contribute on GitHub</a> ·
+<a href="https://github.com/abrakorg/abrak-docs">Edit these docs</a></sub>
+</p>

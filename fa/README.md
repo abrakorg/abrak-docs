@@ -18,6 +18,8 @@
 انسانی، فروش حضوری، فروشگاه آنلاین و بازاریابی. هر مشترک دیتابیس اختصاصی خودش را
 دارد. پرداخت به ازای هر کاربر است، نه به ازای هر اپ.
 
+> **نیروی محرک:** تمام قابلیت‌های اصلی از [اودوو ۱۹](https://www.odoo.com) — بزرگ‌ترین پلتفرم متن‌باز مدیریت کسب‌وکار — مشتق می‌شود. ابرک لایهٔ بومی‌سازی ایرانی، هاست داخلی و پشتیبانی را اضافه می‌کند.
+
 ## فهرست مستندات
 
 | صفحه | موضوع |
@@ -50,5 +52,15 @@
 - تماس: <https://abrak.org/contactus> · `admin@abrak.org`
 - بلاگ و راهنما: <https://abrak.org/blog>
 - یوتیوب: <https://www.youtube.com/@abrak-org>
+- گیت‌هاب: <https://github.com/abrakorg>
+
+---
+
+<p align="center">
+<sub>Abrak is built on <a href="https://www.odoo.com">Odoo</a> (LGPLv3) — the world's most popular open-source ERP.
+Abrak adds Iranian localization, in-country hosting, and Persian-language support.
+<a href="https://github.com/abrakorg/abrak-odoo-addons">Contribute on GitHub</a> ·
+<a href="https://github.com/abrakorg/abrak-docs">Edit these docs</a></sub>
+</p>
 
 </div>
