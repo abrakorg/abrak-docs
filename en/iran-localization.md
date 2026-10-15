@@ -20,6 +20,13 @@ Solar Hijri dates are not just a display format. In Abrak the calendar runs thro
 
 Persian-Indic digits render and parse correctly in forms and reports.
 
+### Solar Hijri dates in print and Excel
+
+- **Printed reports (PDF)** — date and time print in Tehran time, even when the user has no time zone set in their profile. An event stored at 21:00 UTC on 20 March 2026 prints as 1 Farvardin 1405, 00:30.
+- **Excel and CSV export** — in a normal export, every date or datetime column gets a Solar Hijri column next to it, titled "… (Shamsi)". The original Gregorian column stays so that sorting and filtering in Excel keep working.
+- **Import-compatible export** — if you tick "import-compatible" and re-import the file into Abrak, no column is added and the file is the same as before.
+- **Grouping** — group labels in a grouped export are Solar Hijri (for example "Dey 1378").
+
 ## Moadian (electronic invoicing)
 
 Iran's tax authority requires electronic invoicing through the Moadian system. Abrak
