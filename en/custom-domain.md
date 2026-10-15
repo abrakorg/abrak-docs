@@ -50,7 +50,7 @@ In your domain's DNS management console, choose one of the following methods:
 > If you are using a reverse proxy or CDN service like Cloudflare, temporarily set the proxy status to "DNS only" (grey cloud) during verification and certificate issuance.
 
 ### Step 3: Automatic DNS Verification and SSL Issuance
-- Abrak's background service periodically polls and resolves your domain's DNS.
+- Abrak's background scheduler polls and resolves your domain's DNS on an hourly basis.
 - As soon as the DNS records point to Abrak's edge servers, the status automatically advances to **"Issuing Certificate" (`issuing`)**.
 - A trusted, free SSL certificate is automatically provisioned via Let's Encrypt using the HTTP-01 challenge, and edge routing is securely configured.
 

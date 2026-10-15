@@ -2,7 +2,7 @@
 
 # توثيق أبرك
 
-**[فارسی](../fa/README.md) · [English](../en/README.md) · [العربية](../ar/README.md) · [پښتو](../ps/README.md)**
+**[فارسی](../fa/README.md) · [English](../en/README.md) · [العربية](README.md) · [پښتو](../ps/README.md)**
 
 التوثيق الرسمي لمنصّة [**أبرك**](https://abrak.org) (ابرک) — منصّة سحابية لإدارة
 الأعمال مبنية على [أودو ١٩](https://www.odoo.com) ومُعرَّبة ومُكيَّفة للسوق الإيرانية.

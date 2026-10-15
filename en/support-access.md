@@ -46,7 +46,7 @@ sequenceDiagram
 
 Once connected, the specialist's session is strictly managed by your tenant's security layer:
 
-1. **Time-Capped Session (Default 60 Minutes):** Support sessions are intentionally short-lived (capped at 60 minutes).
+1. **Time-Capped Session (Default 60 Minutes):** Support sessions are intentionally short-lived (default 60 minutes, configurable by policy between 5 and 240 minutes).
 2. **Automatic Forced Logout:** The tenant runtime continually monitors session longevity. As soon as the time window elapses, the session is forcibly invalidated, and access terminates immediately (`Session Expired`).
 
 ---
