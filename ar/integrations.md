@@ -90,8 +90,6 @@ OpenAI** — أي أنّ شيفرة مكتوبة لـOpenAI تعمل بتغيي�
 
 <https://abrak.org/hr-attendance-odoo>
 
-</div>
-
 ## Webhook موقَّع
 
 لإجراء الخادم الأصلي في أودو «إرسال إشعار Webhook» (المستخدم في قواعد الأتمتة) في أبرك «مفتاح توقيع» لا يراه إلا مدير النظام. عند ضبط المفتاح يحمل كل طلب POST ثلاث ترويسات:
@@ -114,3 +112,5 @@ def verify(secret: str, headers: dict, raw_body: bytes, max_age=300) -> bool:
                                     hashlib.sha256).hexdigest()
     return hmac.compare_digest(expected, sig)
 ```
+
+</div>

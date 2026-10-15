@@ -52,12 +52,12 @@ In your domain's DNS management console, choose one of the following methods:
 ### Step 3: Automatic DNS Verification and SSL Issuance
 - Abrak's background scheduler checks your domain's DNS every 10 minutes.
 - As soon as the DNS records point to Abrak's edge servers, the status automatically advances to **"Issuing Certificate" (`issuing`)**.
-- A trusted, free SSL certificate is automatically provisioned via Let's Encrypt using the HTTP-01 challenge, and edge routing is securely configured.
+- A trusted, free SSL certificate is automatically provisioned and renewed via Let's Encrypt using the HTTP-01 challenge, and edge routing is securely configured.
 
 ### Step 4: Activation and Tenant Website Binding
 - Upon successful certificate issuance, the status transitions to **"Active" (`active`)**.
 - Your tenant's primary website domain is automatically updated to `https://yourdomain.com`.
-- An SMS confirmation and an in-portal notification are dispatched to your registered contacts.
+- A formal activation notice is dispatched through the notification centre and portal.
 
 ---
 

@@ -51,6 +51,8 @@ and support continue.
 
 <https://abrak.org/hosting>
 
+- For services with their own database, you can connect your own domain with an automatic certificate: [Custom domain](custom-domain.md).
+
 ## Self-hosting
 
 If you would rather run it yourself, Abrak's commercial modules are sold separately. In
@@ -63,8 +65,6 @@ that case upgrades, backups and monitoring are yours to run.
 - HTTPS enforced, with HSTS
 - tenants isolated on their own subdomain
 - standard Odoo access control (groups, record rules, model access rights)
-- vulnerability reports: `admin@abrak.org` — see [SECURITY.md](../SECURITY.md)
-
 - Support agents enter without your password, for a limited time: [Secure support access](support-access.md).
-- Connect your own domain with an automatic certificate: [Custom domain](custom-domain.md).
+- vulnerability reports: `admin@abrak.org` — see [SECURITY.md](../SECURITY.md)
 
