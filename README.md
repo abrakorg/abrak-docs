@@ -36,6 +36,7 @@ without an account, in the language they work in.
 | Section | What it covers |
 |---|---|
 | Getting started | The 7-day trial, first workspace, first users |
+| Package guides | 5-step quickstart for Retail, Manufacturing, and Services & Projects |
 | Apps | The full catalogue, by category |
 | Iran localization | Jalali dates, the Moadian e-invoicing system, Sayad cheques, payroll and social-insurance filings |
 | Integrations | WooCommerce, Torob, Instagram, SMS, cloud telephony, AI/MCP |

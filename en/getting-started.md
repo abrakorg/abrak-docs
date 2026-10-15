@@ -58,6 +58,13 @@ So a shop with 5 staff and 5,000 customers pays for 5 users.
 - Faster tiers are described on the [pricing page](pricing.md).
 - For on-site deployment and team training: <https://abrak.org/services/deployment>
 
+## Onboarding guides by package
+
+If you selected one of Abrak's pre-configured packages, follow its dedicated first 5 steps:
+- [Retail package getting started](getting-started-retail.md) — POS, card terminals, inventory, and Torob
+- [Manufacturing package getting started](getting-started-manufacturing.md) — BOMs, quality points, and job costing
+- [Services & Projects package getting started](getting-started-services.md) — Tasks, timesheets, field dispatch, and SLA ticketing
+
 ## Next
 
 - [The app catalogue](apps.md) — see what is available

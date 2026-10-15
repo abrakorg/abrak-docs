@@ -46,8 +46,15 @@ These do not exist in stock Odoo; Abrak wrote them:
 ## A note on price
 
 Apps are **not priced individually**. The standard plan gives access to all of them and
-you pay per internal user. Bundles exist that cost less than buying the same apps
-separately. See [Pricing](pricing.md).
+you pay per internal user. See [Pricing](pricing.md).
+
+## Ready packages and onboarding guides
+
+For businesses looking to get up and running immediately without selecting individual apps, three specialized bundles are available with dedicated 5-step onboarding guides:
+
+- [Retail package getting started](getting-started-retail.md) — 11 apps for POS, inventory, barcode, Iranian card terminals, and Torob
+- [Manufacturing package getting started](getting-started-manufacturing.md) — 14 apps for Bills of Materials (BOM), quality control, maintenance, and unit costing
+- [Services & Projects package getting started](getting-started-services.md) — 12 apps for project management, timesheets, field dispatch, ticketing, and recurring billing
 
 ## Commercial modules for self-hosting
 
