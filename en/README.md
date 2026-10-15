@@ -38,13 +38,16 @@ without an account, in the language they work in.
 
 | Section | What it covers |
 |---|---|
-| Getting started | The 7-day trial, first workspace, first users |
-| Apps | The full catalogue, by category |
-| Iran localization | Jalali dates, the Moadian e-invoicing system, Sayad cheques, payroll and social-insurance filings |
-| Integrations | WooCommerce, Torob, Instagram, SMS, cloud telephony, AI/MCP |
-| Hosting & data | Where data lives, backups, ownership and export |
-| Pricing | The per-user model and support tiers |
-| FAQ | The questions that come up before buying |
+| [Getting started](getting-started.md) | The 7-day trial, first workspace, first users |
+| [Apps](apps.md) | The full catalogue, by category |
+| [Iran localization](iran-localization.md) | Jalali dates, the Moadian e-invoicing system, Sayad cheques, payroll and social-insurance filings |
+| [Integrations](integrations.md) | WooCommerce, Torob, Instagram, SMS, cloud telephony, AI/MCP |
+| [Hosting & data](hosting-and-data.md) | Where data lives, backups, ownership and export |
+| [Pricing](pricing.md) | The per-user model and support tiers |
+| [FAQ](faq.md) | The questions that come up before buying |
+| [Custom domain](custom-domain.md) | DNS setup (CNAME/A), automated Let's Encrypt SSL, and error states |
+| [Support access](support-access.md) | Zero-knowledge One-Time Token (OTT), 60-min sessions, and audit logging |
+| [Personal AI wallet](ai-wallet.md) | Rial balance, `/my/ai` portal, FX lock, packages, and OpenAI SDK |
 
 ## Language parity
 
