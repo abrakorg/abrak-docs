@@ -48,6 +48,7 @@ Set up the retail touchscreen register and integrate physical card terminals (PC
 1. Go to `Point of Sale → Configuration → Point of Sale`, and open your primary shop register or create a new one.
 2. Under **Payment Methods**, enable Cash and Bank Card (Iranian POS).
 3. In the Iranian POS settings (`abrak_pos_iran`), select the terminal protocol (Behpardakht, Saman Kish, Sadad, or Asan Pardakht) and provide the network IP or serial port to send payment amounts directly to the card terminal.
+   > **Pilot:** the bank card-terminal connection (`abrak_pos_iran`) has so far been tested only with a simulator. Connecting a real bank terminal needs a contract and certificate from your payment service provider (PSP). Until then, record card payments manually in the POS.
 4. Enable cashier barcode badge login and receipt printer options.
 
 > **Measurable outcome:** Clicking **New Session** launches the touch POS interface with products loaded and the card terminal in a ready, listening state.
