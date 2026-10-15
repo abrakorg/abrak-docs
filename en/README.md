@@ -43,11 +43,14 @@ without an account, in the language they work in.
 | [Manufacturing package guide](getting-started-manufacturing.md) | BOM, quality control, maintenance, and costing |
 | [Services package guide](getting-started-services.md) | Tasks, timesheets, field dispatch, helpdesk, and billing |
 | [Apps](apps.md) | The full catalogue, by category |
-| Iran localization | Jalali dates, the Moadian e-invoicing system, Sayad cheques, payroll and social-insurance filings |
-| Integrations | WooCommerce, Torob, Instagram, SMS, cloud telephony, AI/MCP |
-| Hosting & data | Where data lives, backups, ownership and export |
-| Pricing | The per-user model and support tiers |
-| FAQ | The questions that come up before buying |
+| [Iran localization](iran-localization.md) | Jalali dates, the Moadian e-invoicing system, Sayad cheques, payroll and social-insurance filings |
+| [Integrations](integrations.md) | WooCommerce, Torob, Instagram, SMS, cloud telephony, AI/MCP |
+| [Hosting & data](hosting-and-data.md) | Where data lives, backups, ownership and export |
+| [Pricing](pricing.md) | The per-user model and support tiers |
+| [FAQ](faq.md) | The questions that come up before buying |
+| [Custom domain](custom-domain.md) | DNS setup (CNAME/A), automated Let's Encrypt SSL, and error states |
+| [Support access](support-access.md) | Zero-knowledge One-Time Token (OTT), 60-min sessions, and audit logging |
+| [AI wallet](ai-wallet.md) | Personal and company wallets, `/my/ai` portal, Rial top-ups with the price fixed during payment, API keys, and OpenAI SDK |
 
 ## Language parity
 
