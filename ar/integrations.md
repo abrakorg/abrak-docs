@@ -91,3 +91,26 @@ OpenAI** — أي أنّ شيفرة مكتوبة لـOpenAI تعمل بتغيي�
 <https://abrak.org/hr-attendance-odoo>
 
 </div>
+
+## Webhook موقَّع
+
+لإجراء الخادم الأصلي في أودو «إرسال إشعار Webhook» (المستخدم في قواعد الأتمتة) في أبرك «مفتاح توقيع» لا يراه إلا مدير النظام. عند ضبط المفتاح يحمل كل طلب POST ثلاث ترويسات:
+
+- `X-Abrak-Event-Id`: معرّف فريد لكل استدعاء؛ استبعد المكرّر به.
+- `X-Abrak-Timestamp`: الوقت بثواني يونكس.
+- `X-Abrak-Signature: sha256=<hex>`: توقيع HMAC-SHA256 بالمفتاح على البايتات `"<timestamp>." + <الجسم الخام>`.
+
+على المستقبِل إعادة حساب التوقيع على الجسم الخام ومقارنته بزمن ثابت ورفض الطلبات الأقدم من نحو ٥ دقائق. دون مفتاح يبقى سلوك أودو الأصلي كما هو.
+
+```python
+import hmac, hashlib, time
+
+def verify(secret: str, headers: dict, raw_body: bytes, max_age=300) -> bool:
+    ts = headers.get("X-Abrak-Timestamp", "")
+    sig = headers.get("X-Abrak-Signature", "")
+    if not ts.isdigit() or abs(time.time() - int(ts)) > max_age:
+        return False
+    expected = "sha256=" + hmac.new(secret.encode(), ts.encode() + b"." + raw_body,
+                                    hashlib.sha256).hexdigest()
+    return hmac.compare_digest(expected, sig)
+```

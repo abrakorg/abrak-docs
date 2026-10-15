@@ -80,6 +80,18 @@ subscription. Faster tiers are bought separately. See [Pricing](pricing.md).
 The interface is Persian and English. This documentation is published in Persian,
 English, Arabic and Pashto.
 
+### Does Abrak support ask for my password?
+
+No. An agent enters through a one-time link valid for two minutes, the session lasts at most 60 minutes, and the account admin is notified at once. Details: [Secure support access](support-access.md).
+
+### Can I connect my own domain?
+
+Yes, for services with their own database. You create one DNS record; a free certificate is issued and renewed automatically. Details: [Custom domain](custom-domain.md).
+
+### What happens if my storage fills up?
+
+At 90 % and 100 % of the package limit the account admin gets an email with a link to upgrade the resource package; no surprises. Details: [Hosting and data](hosting-and-data.md).
+
 ### Another question?
 
 <https://abrak.org/contactus> · `admin@abrak.org`
