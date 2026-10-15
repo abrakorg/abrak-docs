@@ -39,6 +39,9 @@ without an account, in the language they work in.
 | Section | What it covers |
 |---|---|
 | [Getting started](getting-started.md) | The 7-day trial, first workspace, first users |
+| [Retail package guide](getting-started-retail.md) | POS register, card reader, stock, barcode, and Torob |
+| [Manufacturing package guide](getting-started-manufacturing.md) | BOM, quality control, maintenance, and costing |
+| [Services package guide](getting-started-services.md) | Tasks, timesheets, field dispatch, helpdesk, and billing |
 | [Apps](apps.md) | The full catalogue, by category |
 | [Iran localization](iran-localization.md) | Jalali dates, the Moadian e-invoicing system, Sayad cheques, payroll and social-insurance filings |
 | [Integrations](integrations.md) | WooCommerce, Torob, Instagram, SMS, cloud telephony, AI/MCP |
