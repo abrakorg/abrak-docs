@@ -50,7 +50,7 @@ without an account, in the language they work in.
 | [FAQ](faq.md) | The questions that come up before buying |
 | [Custom domain](custom-domain.md) | DNS setup (CNAME/A), automated Let's Encrypt SSL, and error states |
 | [Support access](support-access.md) | Zero-knowledge One-Time Token (OTT), 60-min sessions, and audit logging |
-| [Personal AI wallet](ai-wallet.md) | Rial balance, `/my/ai` portal, FX lock, packages, and OpenAI SDK |
+| [AI wallet](ai-wallet.md) | Personal and company wallets, `/my/ai` portal, Rial top-ups with the price fixed during payment, API keys, and OpenAI SDK |
 
 ## Language parity
 

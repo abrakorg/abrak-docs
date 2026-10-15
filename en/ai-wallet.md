@@ -11,11 +11,11 @@ Within the Abrak cloud ecosystem, access to advanced AI models (including the co
 Abrak distinguishes between two wallet scopes:
 
 1. **Personal AI Wallet:**
-   - Provisioned for each individual registered user on `chat.abrak.org` and the customer portal.
-   - Individual chat usage and personal API keys deduct credit directly from this wallet.
+   - Belongs to people who sign in to `chat.abrak.org` with their Abrak account and have no separate business subscription. It is created on their first visit to `/my/ai`.
+   - Their chat on `chat.abrak.org` and their own API keys are charged to this wallet. If it has no credit, the request stops with an "insufficient credit" message; no other wallet is ever charged instead.
 2. **Company AI Wallet:**
-   - Associated with your company tenant subscription for organizational processes.
-   - Authorized internal staff can seamlessly toggle between the company and personal wallets directly in the `/my/ai` portal (`?wallet=personal` or `?wallet=company`).
+   - Belongs to a business subscription; the AI features inside that company's Odoo draw on it.
+   - **Only the subscription owner can top up the company wallet and create or change API keys.** Other users of the same company see the balance and usage in `/my/ai`, so they know why AI stopped, but the top-up and key sections are hidden from them.
 
 ---
 
@@ -29,7 +29,7 @@ To view your current balance, purchase top-up packages, or manage developer keys
 flowchart LR
     A["Log in to /my/ai"] --> B["View Rial Balance & Recent Usage"]
     A --> C["Select Token Top-Up Package"]
-    C --> D["Lock Live Exchange Rate & Create Order"]
+    C --> D["Rial Price Fixed on the Order"]
     D --> E["Secure Bank Payment (Zibal / Zarinpal)"]
     E --> F["Instant Balance Credit & Official Invoice"]
     A --> G["Generate API Keys (abrak-sk-...)"]
@@ -50,7 +50,7 @@ flowchart LR
 
 ### B) Purchasing Top-Up Packages
 - Tiered token credit packages are listed to accommodate both individual users and team workflows.
-- **Price and FX Rate Lock:** When you initiate a purchase, the package price in Rials and the underlying exchange rate are frozen onto the order ledger. Mid-transaction currency fluctuations will not alter your checkout total.
+- **Price Fixed During Payment:** The package price is converted to Rials at the exchange rate of that moment and recorded on the order and the transaction. If the rate moves while you pay, neither the amount you pay nor the credit you receive changes. Your next purchase uses the rate of that day.
 - **Banking Gateways:** Transactions are processed securely via Iranian payment providers (Zibal, Zarinpal) with built-in idempotency to prevent duplicate charges.
 - **Accounting Integration:** Approved top-ups immediately record entries in Odoo's native financial ledger and issue an official invoice.
 
@@ -76,7 +76,7 @@ client = OpenAI(
 )
 
 response = client.chat.completions.create(
-    model="openrouter:openrouter/free",
+    model="cloudflare:@cf/openai/gpt-oss-20b",
     messages=[
         {"role": "user", "content": "Explain Abrak accounting in two concise sentences."}
     ],
