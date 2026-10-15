@@ -89,3 +89,26 @@ Clock-in by GPS geofence, rotating QR code or messenger, wired directly into lab
 payroll calculation.
 
 <https://abrak.org/hr-attendance-odoo>
+
+## Signed webhooks
+
+Odoo's native "Send Webhook Notification" server action (usable from Automation Rules) has, on Abrak, a "webhook signing key" visible to system admins only. With a key set, every POST carries three headers:
+
+- `X-Abrak-Event-Id`: unique per call; deduplicate on it.
+- `X-Abrak-Timestamp`: Unix seconds.
+- `X-Abrak-Signature: sha256=<hex>`: HMAC-SHA256 with the key over the bytes `"<timestamp>." + <raw body>`.
+
+Receivers recompute the signature over the raw body, compare in constant time and reject calls older than about 5 minutes. Without a key, Odoo's native behaviour is unchanged.
+
+```python
+import hmac, hashlib, time
+
+def verify(secret: str, headers: dict, raw_body: bytes, max_age=300) -> bool:
+    ts = headers.get("X-Abrak-Timestamp", "")
+    sig = headers.get("X-Abrak-Signature", "")
+    if not ts.isdigit() or abs(time.time() - int(ts)) > max_age:
+        return False
+    expected = "sha256=" + hmac.new(secret.encode(), ts.encode() + b"." + raw_body,
+                                    hashlib.sha256).hexdigest()
+    return hmac.compare_digest(expected, sig)
+```

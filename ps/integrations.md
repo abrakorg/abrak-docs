@@ -95,3 +95,26 @@ MCP (Model Context Protocol) دې ته اجازه ورکوي چې د مصنوع�
 <https://abrak.org/hr-attendance-odoo>
 
 </div>
+
+## لاسلیک شوی وېب‌هوک
+
+د اوډو اصلي «د وېب‌هوک خبرتیا لېږل» سرور اکشن (چې په اتومات قواعدو کې کارول کیږي) په ابرک کې یو «د لاسلیک کیلي» لري چې یوازې د سیسټم مدیر یې ویني. کله چې کیلي وټاکل شي، هره POST غوښتنه درې سرلیکونه لري:
+
+- `X-Abrak-Event-Id`: د هرې غوښتنې ځانګړی پېژندګلوی؛ تکراري غوښتنې پرې جلا کړئ.
+- `X-Abrak-Timestamp`: د یونیکس ثانیې.
+- `X-Abrak-Signature: sha256=<hex>`: د همدې کیلي HMAC-SHA256 لاسلیک پر بایټونو `"<timestamp>." + <خام بدن>`.
+
+ترلاسه کوونکی دې لاسلیک پر خام بدن بیا محاسبه کړي، په ثابت وخت پرتله یې کړي او له شاوخوا ۵ دقیقو زړې غوښتنې رد کړي. له کیلي پرته د اوډو اصلي چلند نه بدلیږي.
+
+```python
+import hmac, hashlib, time
+
+def verify(secret: str, headers: dict, raw_body: bytes, max_age=300) -> bool:
+    ts = headers.get("X-Abrak-Timestamp", "")
+    sig = headers.get("X-Abrak-Signature", "")
+    if not ts.isdigit() or abs(time.time() - int(ts)) > max_age:
+        return False
+    expected = "sha256=" + hmac.new(secret.encode(), ts.encode() + b"." + raw_body,
+                                    hashlib.sha256).hexdigest()
+    return hmac.compare_digest(expected, sig)
+```

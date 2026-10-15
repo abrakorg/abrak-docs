@@ -23,6 +23,16 @@ difference shows up precisely when you want to leave.
 
 Automatic daily backups. For a restore, or an off-schedule copy, ask support.
 
+## Backup restore on request
+
+In the customer panel (`/my/apps`, backup card) every completed backup has a "request restore" button, with an optional reason. The request goes to Abrak operations; an operator approves and runs it. You are notified when the request is received and when it is done or rejected.
+
+Before restoring, a safety backup of the current database is taken automatically, so the restore itself can be undone. Logins are paused during the restore and re-enabled after a health check; a suspended service stays suspended.
+
+## Storage alerts
+
+Database and file storage are measured every hour. At 90 % and 100 % of the resource package limit, the account admin and the business email receive an email (also noted in the account history) with a link to upgrade the resource package and a link to contact support. No SMS is sent. Each level is announced once and re-arms if usage drops below 70 %.
+
 ## Ownership and portability
 
 Your data is yours. Abrak is built on the open-source Odoo core rather than a closed
@@ -54,3 +64,7 @@ that case upgrades, backups and monitoring are yours to run.
 - tenants isolated on their own subdomain
 - standard Odoo access control (groups, record rules, model access rights)
 - vulnerability reports: `admin@abrak.org` — see [SECURITY.md](../SECURITY.md)
+
+- Support agents enter without your password, for a limited time: [Secure support access](support-access.md).
+- Connect your own domain with an automatic certificate: [Custom domain](custom-domain.md).
+
