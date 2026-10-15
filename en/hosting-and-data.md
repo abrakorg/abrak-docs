@@ -34,6 +34,11 @@ elsewhere, that is a condition of sale, not a favour.
 From shared hosting to a dedicated VPS. Which one fits depends on user count, data
 volume and whether you need dedicated resources.
 
+The tiers open for purchase are always the ones listed on the hosting page and at
+signup. When a tier is withdrawn from sale, only new customers stop seeing it: the
+service you already have is never suspended, moved or downgraded, and its renewals
+and support continue.
+
 <https://abrak.org/hosting>
 
 ## Self-hosting
