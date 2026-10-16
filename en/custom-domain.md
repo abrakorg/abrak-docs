@@ -20,7 +20,7 @@ Before setting up your custom domain, confirm the following requirements:
 
 ```mermaid
 flowchart TD
-    A["Request Domain in Abrak Hub"] --> B["Configure CNAME or A Record in DNS"]
+    A["Domain given at sign-up or requested from support"] --> B["Configure CNAME or A Record in DNS"]
     B --> C{"Periodic DNS Check"}
     C -- "DNS not matching yet" --> D["State: Waiting for DNS (pending_dns)"]
     D --> C
@@ -29,10 +29,9 @@ flowchart TD
     E -- "Failure or error" --> G["State: Failed (failed)"]
 ```
 
-### Step 1: Submit Your Domain in the Abrak Hub
-- Log in to your Abrak subscription dashboard.
-- In your subscription settings, enter your domain name without protocols like `http://` or `https://` (for example, `shop.example.com`).
-- Once submitted, your domain status will change to **"Waiting for DNS" (`pending_dns`)**.
+### Step 1: Give Us Your Domain
+- Enter the domain at sign-up (the "custom domain" option), or ask [Abrak support](https://abrak.org/contactus) for an existing service; without `http://` or `https://` (for example, `shop.example.com`).
+- An Abrak operator starts the connection and the status becomes **"Waiting for DNS" (`pending_dns`)**. The exact record to create is sent to you through the notification centre.
 
 ### Step 2: Configure Your DNS Records
 In your domain's DNS management console, choose one of the following methods:
@@ -52,12 +51,12 @@ In your domain's DNS management console, choose one of the following methods:
 ### Step 3: Automatic DNS Verification and SSL Issuance
 - Abrak's background scheduler checks your domain's DNS every 10 minutes.
 - As soon as the DNS records point to Abrak's edge servers, the status automatically advances to **"Issuing Certificate" (`issuing`)**.
-- A trusted, free SSL certificate is automatically provisioned via Let's Encrypt using the HTTP-01 challenge, and edge routing is securely configured.
+- A trusted, free SSL certificate is automatically provisioned and renewed via Let's Encrypt using the HTTP-01 challenge, and edge routing is securely configured.
 
 ### Step 4: Activation and Tenant Website Binding
 - Upon successful certificate issuance, the status transitions to **"Active" (`active`)**.
 - Your tenant's primary website domain is automatically updated to `https://yourdomain.com`.
-- An SMS confirmation and an in-portal notification are dispatched to your registered contacts.
+- An activation notice is sent through the notification centre and recorded in your account history.
 
 ---
 
@@ -76,7 +75,7 @@ In your domain's DNS management console, choose one of the following methods:
 
 ## 4. Removing or Changing a Domain
 
-- To delete or replace a custom domain, select the removal option in your subscription portal.
+- To delete or replace a custom domain, tell [Abrak support](https://abrak.org/contactus); an operator removes it from the edge.
 - The status briefly changes to `removing` while edge routing is removed and your website is reset to the default subdomain, before returning to `none`.
 
 ---

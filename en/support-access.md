@@ -35,7 +35,7 @@ sequenceDiagram
     Hub-->>Staff: Generates 120-second token
     Staff->>Tenant: Initiates login with token
     Tenant->>Hub: Validates SHA-256 hash and burns token immediately
-    Hub->>Customer: Dispatches SMS & in-app notification with specialist details
+    Hub->>Customer: Notifies account admin via Abrak notification centre with specialist details
     Hub->>Tenant: Opens short-lived session (max 60 minutes)
     Note over Staff,Tenant: Session expires automatically upon reaching duration limit
 ```
@@ -59,8 +59,8 @@ Every support entry produces immutable, verifiable audit records:
    - The specialist's name, login identifier, Solar Hijri timestamp, and session duration are recorded in your subscription chatter.
 2. **System Log Ingestion (`ir.logging`):**
    - Detailed server logs record the access event for external security audits.
-3. **Instant SMS & Hub Notification:**
-   - At the exact moment of login, an automated notification is sent to your account's primary contact numbers:
+3. **Notification Centre Alert:**
+   - The moment an agent enters, the account admin is notified through Abrak's notification centre (with the agent's name, timestamp, and maximum duration), and the entry is recorded in the account history:
    > *"Abrak Support accessed your workspace on [Date & Time] to assist with your request (Specialist: [Name], duration: max 60 minutes). If you did not request support, please notify us immediately."*
 
 ---

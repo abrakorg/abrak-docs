@@ -94,8 +94,6 @@ MCP (Model Context Protocol) دې ته اجازه ورکوي چې د مصنوع�
 
 <https://abrak.org/hr-attendance-odoo>
 
-</div>
-
 ## لاسلیک شوی وېب‌هوک
 
 د اوډو اصلي «د وېب‌هوک خبرتیا لېږل» سرور اکشن (چې په اتومات قواعدو کې کارول کیږي) په ابرک کې یو «د لاسلیک کیلي» لري چې یوازې د سیسټم مدیر یې ویني. کله چې کیلي وټاکل شي، هره POST غوښتنه درې سرلیکونه لري:
@@ -118,3 +116,5 @@ def verify(secret: str, headers: dict, raw_body: bytes, max_age=300) -> bool:
                                     hashlib.sha256).hexdigest()
     return hmac.compare_digest(expected, sig)
 ```
+
+</div>

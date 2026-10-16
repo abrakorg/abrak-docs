@@ -91,8 +91,6 @@ MCP (Model Context Protocol) استانداردی است که به دستیار 
 
 <https://abrak.org/hr-attendance-odoo>
 
-</div>
-
 ## وب‌هوک امضاشده
 
 اکشن بومی «ارسال اعلان وب‌هوک» اودوو (قابل استفاده در قواعد اتوماسیون) در ابرک یک «کلید امضای وب‌هوک» دارد که فقط مدیر سیستم می‌بیند. اگر کلید تنظیم شود، هر فراخوانی POST سه سرآیند دارد:
@@ -115,3 +113,5 @@ def verify(secret: str, headers: dict, raw_body: bytes, max_age=300) -> bool:
                                     hashlib.sha256).hexdigest()
     return hmac.compare_digest(expected, sig)
 ```
+
+</div>
